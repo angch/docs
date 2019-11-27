@@ -57,7 +57,7 @@ updateConfig.Timeout = 60
 // Now we can pass our UpdateConfig struct to the library to start getting updates.
 // The GetUpdatesChan method is opinionated and as such, it is reasonable to implement
 // your own version of it. It is easier to use if you have no special requirements though.
-updates := bot.GetUpdatesChan(u)
+updates, _ := bot.GetUpdatesChan(updateConfig)
 
 // Now we're ready to start going through the updates we're given.
 // Because we have a channel, we can range over it.
